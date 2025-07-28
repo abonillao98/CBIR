@@ -32,4 +32,3 @@ for img_name in img_names:
 
 np.save("hists_"+str(bins)+"-bins_"+str(num_of_images)+"-imgs.npy", np.array(hists, dtype=object), allow_pickle=True)
 toc()
-
