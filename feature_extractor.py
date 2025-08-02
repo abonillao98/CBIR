@@ -1,6 +1,10 @@
 import os
 import cv2
 import numpy as np
+'''
+Given the 2000 images of the UKentuckyDatabse, this script produces a .npy file
+with 2000 histograms indexated by the image number
+'''
 
 #Homemade version of matlab tic and toc functions
 def tic():
