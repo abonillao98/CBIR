@@ -3,10 +3,11 @@ import cv2
 import numpy as np
 '''
 Given the 2000 images of the UKentuckyDatabse, this script produces a .npy file
-with 2000 histograms indexated by the image number
+with 2000 gray-color histograms indexated by the image number
 '''
 
-#Homemade version of matlab tic and toc functions
+# Python's version of Matlab's "Tic / Toc" functions
+# Credits to StackOverflow user GuestPoster
 def tic():
     import time
     global startTime_for_tictoc
@@ -34,5 +35,5 @@ for img_name in img_names:
     hist = hist/max(hist) # normalize histogram
     hists.append(hist)
 
-np.save("hists_"+str(bins)+"-bins_"+str(num_of_images)+"-imgs.npy", np.array(hists, dtype=object), allow_pickle=True)
+np.save("hists_"+str(bins)+"-bins_"+str(num_of_images)+"-imgs_gray.npy", np.array(hists, dtype=object), allow_pickle=True)
 toc()

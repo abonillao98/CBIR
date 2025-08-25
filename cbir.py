@@ -25,8 +25,8 @@ def ten_best_matches(distances):
 
 
 # load histogram database. databases:
-# hists_256-bins_2000-imgs.npy
-hists = np.load("hists_256-bins_2000-imgs.npy",allow_pickle=True)
+# hists_256-bins_2000-imgs_gray.npy
+hists = np.load("hists_256-bins_2000-imgs_gray.npy",allow_pickle=True)
 
 input_file = "query.txt"
 output_file = "matches.txt"
